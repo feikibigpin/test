@@ -17,8 +17,8 @@ function draw(){
      fill(0);
      noStroke();
      text("SHAKE YOUR DEVICE", width/2,height - height/1.2);    
-    
-    var magnitude = map(value, 6, 10, 6, 10);
+    var magnitude = pAccelerationX * pAccelerationY;
+    //var magnitude = map(value, 6, 10, 6, 10);
     
     if (magnitude > 6){
         
@@ -49,7 +49,7 @@ function draw(){
     textSize(height/50);
     textAlign(CENTER);
     textStyle(NORMAL);    
-    text(value, width/2, height - height/8);
+    text(value, width/2, height - height/8);         //parece que entrega os valores de los untos
         
     textStyle(BOLD);
     textSize(height/30);
@@ -69,19 +69,19 @@ function draw(){
       }
   
 }
-   
+//--------------------------------------------------------------------------------------------------------------   
 
-function deviceShaken(){
-    
-    value = pAccelerationX * pAccelerationY;   
+//function deviceShaken(){
+  //  
+    //value = pAccelerationX * pAccelerationY;   
    
     //create objects
-    for (var i = 0; i < value*10; i++){
-        dots.push(new QuakeDots());
-    } 
+    //for (var i = 0; i < value*10; i++){
+      //  dots.push(new QuakeDots());
+    //} 
     
-}
-
+//}
+//-------------------------------------------------------------------------------------------------------------
 
 function QuakeDots(){
   
