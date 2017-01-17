@@ -18,14 +18,14 @@ function draw(){
      noStroke();
      text("SHAKE YOUR DEVICE", width/2,height - height/1.2);    
     
-    var magnitude = map(value, 0, pAccelerationX * pAccelerationY, 6, 10);
+    var magnitude = map(value, 6, 10, 6, 10);
     
     if (magnitude > 6){
         
         //CREATE THE ELLIPSE AREA
     var x = width/2;
     var y = height/2;
-    var r = value * 2; 
+    var r = value * magnitude/2; 
     
     noFill();
     stroke(0);
