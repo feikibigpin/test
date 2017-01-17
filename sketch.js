@@ -17,7 +17,7 @@ function draw(){
      fill(0);
      noStroke();
      text("SHAKE YOUR DEVICE", width/2,height - height/1.2);    
-    var magnitude = (pAccelerationX * pAccelerationY)/100000000;
+    var magnitude = (pAccelerationX * pAccelerationY * pAccelerationZ)/100000000;
     //var magnitude = map(value, 6, 10, 6, 10);
     
     if (magnitude > 6){
